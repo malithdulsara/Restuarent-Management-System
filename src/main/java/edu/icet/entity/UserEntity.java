@@ -1,5 +1,6 @@
 package edu.icet.entity;
 
+import edu.icet.utill.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,5 @@ public class UserEntity {
     private String email;
     private String password;
     private Integer restaurantId;
-    private Integer roleId;
+    private Role role;
 }
