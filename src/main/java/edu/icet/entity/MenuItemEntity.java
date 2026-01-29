@@ -1,8 +1,6 @@
 package edu.icet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,12 +9,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "category")
-
-public class CategoryEntity {
+@Table(name = "menu_item")
+public class MenuItemEntity {
     @Id
-    private Long id;
+    private Integer id;
     private String name;
-    private Long restaurantId;
+    private Double price;
+    private String availability;
+    private Long categoryId;
     private String imageUrl;
 }
