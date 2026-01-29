@@ -1,5 +1,6 @@
 package edu.icet.dto;
 
+import edu.icet.utill.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,5 +16,5 @@ public class UserDto {
     private String email;
     private String password;
     private Integer restaurantId;
-    private Integer roleId;
+    private Role role;
 }
