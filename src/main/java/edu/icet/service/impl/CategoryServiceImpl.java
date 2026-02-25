@@ -34,10 +34,9 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void delete(Long id) {
         if (!categoryRepository.existsById(Math.toIntExact(id))) {
-            throw new RuntimeException("Category not found with id: " + id);
+            throw new IllegalArgumentException("Category not found with id: " + id);
         }
         categoryRepository.deleteById(Math.toIntExact(id));
-
     }
 
     @Override
