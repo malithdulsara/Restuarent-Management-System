@@ -5,10 +5,11 @@ import edu.icet.service.MenuItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/api/v1/categories")
+@RequestMapping("/api/v1/MenuItem")
 @RequiredArgsConstructor
 @CrossOrigin
 @RestController
+
 public class MenuItemController {
     private final MenuItemService menuItemService;
     @GetMapping("/all")
@@ -19,7 +20,7 @@ public class MenuItemController {
     public void addMenuItem(@RequestBody Integer id) {
         menuItemService.delete(id);
     }
-    @PostMapping("/add")
+    @PostMapping("/addItem")
     public void addMenuItem(@RequestBody MenuItemDto menuItemDto) {
         menuItemService.save(menuItemDto);
     }
